@@ -34,11 +34,6 @@
 .dot {
     width: 20px;
     margin-left: 10px;
-    transition: 2s;
-}
-
-.dot:hover {
-    background-color: bisque;
 }
 
 .active {

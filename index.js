@@ -16,6 +16,21 @@ const activeDot = (index) => {
     dots[index].classList.add("active");
 }
 
+// Деативизация кнопок в пограничных значениях
+
+const disablingNextAndPrevButtons = (index) => {
+    if (index === 0) {
+        prevButton.setAttribute("disabled", "");
+        nextButton.removeAttribute("disabled");
+    } else if (index === 4) {
+        nextButton.setAttribute("disabled", "");
+        prevButton.removeAttribute("disabled");
+    } else {
+        nextButton.removeAttribute("disabled");
+        prevButton.removeAttribute("disabled");
+    }
+}
+
 // Переключение на кнопку некст
 
 const nextSlide = () => {
@@ -30,6 +45,8 @@ const nextSlide = () => {
     sliderLine.style.left = position + "px";
 
     activeDot(dotIndex);
+
+    disablingNextAndPrevButtons(dotIndex);
 }
 
 // Переключение на кнопку прев
@@ -46,6 +63,8 @@ const prevSlide = () => {
     sliderLine.style.left = position + "px";
 
     activeDot(dotIndex);
+
+    disablingNextAndPrevButtons(dotIndex);
 }
 
 // Переключение пуговками
@@ -58,6 +77,8 @@ dots.forEach(
 
             dotIndex = index;
             activeDot(dotIndex);
+
+            disablingNextAndPrevButtons(dotIndex);
         })
     }
 )
