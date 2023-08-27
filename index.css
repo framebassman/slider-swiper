@@ -1,0 +1,47 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.button-prev, .button-next, .slider-wrapper, .dot {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.slider-wrapper {
+    width: 200px;
+    overflow: hidden;
+}
+
+.slider-line {
+    display: flex;
+    position: relative;
+    left: 0;
+    transition: 2s;
+}
+
+.item {
+    min-width: 200px;
+    height: 100px;
+    background-color: aquamarine;
+}
+
+.dot {
+    width: 20px;
+    margin-left: 10px;
+    transition: 2s;
+}
+
+.dot:hover {
+    background-color: bisque;
+}
+
+.active {
+    background-color: aquamarine;
+}
+
